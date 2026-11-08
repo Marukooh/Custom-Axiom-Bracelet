@@ -1,5 +1,8 @@
 # Nexus Mods page setup (manual, one-off)
 
+**Main file ID:** 8344104 (set as `NEXUSMODS_FILE_ID` in the GitHub environment `nexusmods` on 2026-11-08;
+`NEXUSMODS_API_KEY` still to be set by Marco). Mod page ID: not recorded yet.
+
 Nexus has no API to create a mod page: it is created once on the website, then every update goes
 through the **Deploy to Nexus Mods** GitHub workflow.
 
