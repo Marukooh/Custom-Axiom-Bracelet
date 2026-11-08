@@ -1,5 +1,7 @@
 # Custom Axiom Bracelet
 
+![Custom Axiom Bracelet](art/banner.png)
+
 A Crimson Desert mod for [Definitive Mod Manager](https://www.nexusmods.com/crimsondesert/mods/633) (DMM) that lets you
 choose, one by one, the buffs on the Axiom Bracelet (Kliff, Oongka and Damiane), plus a few Quality of Life changes.
 
@@ -42,3 +44,7 @@ Writes the seven pack folders and `release/Custom Axiom Bracelet v<VERSION>.zip`
 The `Deploy to Nexus Mods` workflow builds the zip and uploads it as a new version of an existing Nexus file.
 It needs the repository secret `NEXUSMODS_API_KEY`, the variable `NEXUSMODS_FILE_ID` and an environment
 called `nexusmods`. Bump `VERSION` in `build.py`, then run the workflow with the same version.
+
+## License
+
+Source-available, all rights reserved: see [LICENSE](LICENSE) and [NOTICE.md](NOTICE.md). Contributions are welcome.

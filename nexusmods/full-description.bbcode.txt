@@ -1,0 +1,76 @@
+[center][img]https://raw.githubusercontent.com/Marukooh/Custom-Axiom-Bracelet/main/art/banner.png[/img]
+
+[size=3][color=#4ADE80][b]FOR CRIMSON DESERT 2.04.08[/b][/color]  •  [color=#FBBF24][b]DMM 4.8  •  Windows, Linux (Proton) and Steam Deck  •  Any game language[/b][/color][/size][/center]
+
+[line]
+
+[size=4][color=#D4A64A][b]Your bracelet. Your rules.[/b][/color][/size]
+[size=3][color=#D4D4D8]
+Kliff, Oongka and Damiane all wear the Axiom Bracelet, and it does next to nothing. [b]Custom Axiom Bracelet[/b] turns it into the piece of gear you want: one download, [b]29 options[/b] split into [b]7 cards[/b] in Definitive Mod Manager, and every option is its own checkbox. Want only the elemental resistances? Tick three boxes. Want the full god-tier bracelet? Tick them all.
+
+[color=#FBBF24][b]Features[/b][/color]
+[list]
+[*][b]Pick buff by buff:[/b] every option is independent, so any combination works. No more choosing between a dozen pre-made editions.
+[*][b]Grouped and readable:[/b] seven collapsible cards with plain names and a short description under every option.
+[*][b]All three characters:[/b] each option applies to Kliff's, Oongka's and Damiane's Axiom Bracelet at once.
+[*][b]Charting the Unknown ready:[/b] swim speed and breath buffs for the ocean, at the highest level the game defines. The breath options need the DLC and are skipped automatically without it.
+[*][b]Quality of Life included:[/b] bigger stacks, more charges, shorter cooldowns and tougher gear, each one optional.
+[*][b]Survives game updates:[/b] built on DMM's field-level format, which finds the right records by name instead of fixed byte offsets.
+[/list]
+[/color][/size]
+
+[line]
+
+[size=4][color=#D4A64A][b]What's inside[/b][/color][/size]
+[size=3][color=#D4D4D8]
+[list]
+[*][color=#E05A47][b]1 - Combat:[/b][/color] Attack +999, Defense +999, Attack Speed Lv15, Critical Rate Lv15, Heal on Hit Lv10
+[*][color=#E8893A][b]2 - Resistances:[/b][/color] Fire, Ice and Lightning Resistance Lv15, Fall Damage Reduction Lv10
+[*][color=#4ADE80][b]3 - Regeneration:[/b][/color] HP, Spirit and Stamina Regen Lv50, Lower Stamina Use Lv10
+[*][color=#38BDF8][b]4 - Movement:[/b][/color] Move Speed Lv15, Climb Speed Lv15, Swim Speed Lv10
+[*][color=#22D3EE][b]5 - Underwater (DLC):[/b][/color] Max Breath Lv80, Breath Regen Lv5, Breath on Hit Lv3
+[*][color=#A78BFA][b]6 - Utility:[/b][/color] Thievery, Animal Friendship and Contribution EXP Lv15, Metal Magnet and Restriction Immunity passives
+[*][color=#FBBF24][b]7 - Quality of Life:[/b][/color] Max Stack 999999, 99 Charges, Shorter Item Cooldowns, Durability 65535, Never Destroyed When Broken
+[/list]
+[/color][/size]
+
+[size=4][color=#D4A64A][b]A word on the Abyss effect limit[/b][/color][/size]
+[size=3][color=#D4D4D8]Every bracelet buff counts as one Abyss effect, the same as the Abyss Gear socketed in your armor. Players report that going over [b]18 Abyss effects in total[/b] can leave the game stuck on the loading screen. Count your bracelet buffs together with your armor's Abyss Gear, and untick a few if you hit an endless load. Stats (Attack, Defense, speeds, critical rate), the two passives and the Quality of Life card are not Abyss effects.[/color][/size]
+
+[line]
+
+[size=4][color=#D4A64A][b]Requirements[/b][/color][/size]
+[size=3][color=#D4D4D8]
+[list]
+[*]Crimson Desert [b]2.04.08[/b].
+[*][url=https://www.nexusmods.com/crimsondesert/mods/633][b]Definitive Mod Manager[/b][/url] [b]4.8[/b] or newer.
+[*]Optional: [b]Charting the Unknown[/b] DLC for the Underwater card.
+[*][b]Linux / Steam Deck:[/b] add [i]winmm=n,b[/i] to your launch options, e.g. [i]WINEDLLOVERRIDES="winmm=n,b" %command%[/i] (append it to your existing overrides if you already have some).
+[/list]
+[/color][/size]
+
+[size=4][color=#D4A64A][b]Installation[/b][/color][/size]
+[size=3][color=#D4D4D8]
+[list=1]
+[*]Use [b]Mod Manager Download[/b], or press [b]Import[/b] in DMM and pick the ZIP. You get seven cards named [i]Custom Axiom Bracelet 1 - Combat[/i] to [i]7 - Quality of Life[/i].
+[*]Tick the options you want in each card, then press [b]Mount[/b].
+[/list]
+To change your build, tick or untick options and Mount again. To uninstall, untick everything and Mount (or Unmount). Your save stays loadable.
+[/color][/size]
+
+[size=4][color=#D4A64A][b]Compatibility[/b][/color][/size]
+[size=3][color=#D4D4D8]Works alongside other DMM mods. Mods that edit the Axiom Bracelet, or the stack size, charges, cooldowns or durability of the same items, overlap with the matching options: the later mod in your load order wins. Do not use it together with other Axiom Bracelet buff mods.[/color][/size]
+
+[line]
+
+[size=4][color=#D4A64A][b]Also by me[/b][/color][/size]
+[size=3][color=#D4D4D8][url=https://www.nexusmods.com/crimsondesert/mods/3370][b]Custom Artifact Challenges Difficulty[/b][/url]  -  choose how forgiving or demanding the Artifact Challenges are, with four presets (Cheat, Easy, Moderate, Hard) for timers, counts and distance requirements, including Charting the Unknown.
+
+[url=https://www.nexusmods.com/crimsondesert/mods/3946][b]Withdraw Camp Funds[/b][/url]  -  adds a Withdraw Camp Funds option to Carl's menu at the Greymane Camp that turns Camp Funds back into silver, at the exact inverse of the game's donation rate, with the game's own quantity slider.[/color][/size]
+
+[line]
+
+[center][size=3][color=#A1A1AA]Inspired by [url=https://www.nexusmods.com/crimsondesert/mods/630]Axiom of Excellence[/url] by jbSpine, the original Axiom Bracelet buff mod. Custom Axiom Bracelet is a complete rework built from scratch for the current game.
+Thanks to the Definitive Mod Manager developers and to the Crimson Desert modding community.
+Source code (read-only, contributions welcome): [url=https://github.com/Marukooh/Custom-Axiom-Bracelet]github.com/Marukooh/Custom-Axiom-Bracelet[/url]
+Crimson Desert is a trademark of Pearl Abyss. Unofficial fan-made mod.[/color][/size][/center]
