@@ -5,7 +5,7 @@
 <p align="center">
   <a href="https://github.com/Marukooh/Custom-Axiom-Bracelet/actions/workflows/build.yml"><img alt="Build" src="https://github.com/Marukooh/Custom-Axiom-Bracelet/actions/workflows/build.yml/badge.svg"></a>
   <a href="https://github.com/Marukooh/Custom-Axiom-Bracelet/releases/latest"><img alt="Latest release" src="https://img.shields.io/github/v/release/Marukooh/Custom-Axiom-Bracelet?label=release&color=d4a64a"></a>
-  <a href="https://www.nexusmods.com/crimsondesert/mods/NEXUS_MOD_ID"><img alt="Nexus Mods" src="https://img.shields.io/badge/Nexus%20Mods-Custom%20Axiom%20Bracelet-d98f40"></a>
+  <a href="https://www.nexusmods.com/crimsondesert/mods/4165"><img alt="Nexus Mods" src="https://img.shields.io/badge/Nexus%20Mods-Custom%20Axiom%20Bracelet-d98f40"></a>
   <img alt="Game version" src="https://img.shields.io/badge/Crimson%20Desert-2.04.08-8a1c1c">
   <img alt="Mod manager" src="https://img.shields.io/badge/DMM-4.8-3b5b7a">
   <img alt="Platforms" src="https://img.shields.io/badge/Windows%20%7C%20Linux%20(Proton)%20%7C%20Steam%20Deck-supported-2f6b3a">
