@@ -1,0 +1,56 @@
+name: Bug report
+description: Something doesn't work in game or in DMM
+labels: [bug]
+body:
+  - type: markdown
+    attributes:
+      value: Thanks for the report! The DMM mount log is the fastest way to find the problem.
+  - type: input
+    id: game
+    attributes:
+      label: Game version
+      description: Shown in the game's main menu (e.g. 2.04.08)
+    validations:
+      required: true
+  - type: input
+    id: mod
+    attributes:
+      label: Mod version
+      description: Shown on the Custom Axiom Bracelet cards in DMM (e.g. 2.04.08)
+    validations:
+      required: true
+  - type: input
+    id: dmm
+    attributes:
+      label: DMM version
+    validations:
+      required: true
+  - type: dropdown
+    id: platform
+    attributes:
+      label: Platform
+      options: [Windows, Linux (Proton), Steam Deck]
+    validations:
+      required: true
+  - type: textarea
+    id: options
+    attributes:
+      label: Which options are ticked?
+    validations:
+      required: true
+  - type: textarea
+    id: what
+    attributes:
+      label: What happened, and what did you expect?
+    validations:
+      required: true
+  - type: textarea
+    id: log
+    attributes:
+      label: DMM mount log
+      description: The lines about Custom Axiom Bracelet from DMM's mount log (DMM → logs folder)
+      render: text
+  - type: textarea
+    id: mods
+    attributes:
+      label: Other mods (DMM mods and ASI plugins)

@@ -1,0 +1,24 @@
+name: New game version
+description: An option stopped working or DMM skips it after a Crimson Desert update
+labels: [game-update]
+body:
+  - type: input
+    id: game
+    attributes:
+      label: New game version
+    validations:
+      required: true
+  - type: textarea
+    id: options
+    attributes:
+      label: Which options no longer work?
+    validations:
+      required: true
+  - type: textarea
+    id: log
+    attributes:
+      label: DMM mount log
+      description: The "skipped" lines tell which edit no longer matches the game
+      render: text
+    validations:
+      required: true

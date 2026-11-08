@@ -1,0 +1,108 @@
+name: Release
+
+run-name: Release ${{ inputs.version }}${{ inputs.publish_nexus && ' (GitHub + Nexus Mods)' || ' (GitHub only)' }}
+
+on:
+  workflow_dispatch:
+    inputs:
+      version:
+        description: Mod version = game version it is validated for (e.g. 2.04.08, or 2.04.08b for a second release on the same game version); must match VERSION in build.py
+        required: true
+        type: string
+      changelog:
+        description: One-line changelog (GitHub release notes and Nexus file description)
+        required: true
+        type: string
+      publish_nexus:
+        description: Also upload the file to Nexus Mods
+        required: true
+        default: false
+        type: boolean
+      archive_existing_version:
+        description: Archive the file version currently published on Nexus Mods
+        required: true
+        default: false
+        type: boolean
+
+permissions:
+  contents: write
+
+concurrency:
+  group: release
+  cancel-in-progress: false
+
+jobs:
+  release:
+    name: Build, release and upload
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    environment: nexusmods
+    env:
+      VERSION: ${{ inputs.version }}
+      PACKAGE: release/Custom Axiom Bracelet v${{ inputs.version }}.zip
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803 # v6
+
+      - name: Check version
+        run: |
+          set -euo pipefail
+          [[ "$VERSION" =~ ^[0-9]+\.[0-9]+\.[0-9]+[a-z]?$ ]] || { echo "version must look like 2.04.08 or 2.04.08b" >&2; exit 1; }
+          grep -q "^VERSION = \"$VERSION\"" build.py || { echo "VERSION in build.py is not $VERSION" >&2; exit 1; }
+          if git ls-remote --exit-code --tags origin "v$VERSION" >/dev/null; then echo "tag v$VERSION already exists" >&2; exit 1; fi
+
+      - name: Check Nexus Mods configuration
+        if: inputs.publish_nexus
+        env:
+          NEXUSMODS_API_KEY: ${{ secrets.NEXUSMODS_API_KEY }}
+          NEXUSMODS_FILE_ID: ${{ vars.NEXUSMODS_FILE_ID }}
+        run: |
+          set -euo pipefail
+          test -n "$NEXUSMODS_API_KEY" || { echo 'Missing NEXUSMODS_API_KEY secret (environment "nexusmods").' >&2; exit 1; }
+          [[ "$NEXUSMODS_FILE_ID" =~ ^[0-9]+$ ]] || { echo 'Missing or non-numeric NEXUSMODS_FILE_ID variable.' >&2; exit 1; }
+
+      - name: Build and package
+        run: |
+          set -euo pipefail
+          python3 build.py
+          test -f "$PACKAGE" || { echo "build did not produce $PACKAGE" >&2; exit 1; }
+          unzip -l "$PACKAGE"
+
+      - name: Create GitHub release
+        env:
+          GH_TOKEN: ${{ github.token }}
+          CHANGELOG: ${{ inputs.changelog }}
+        run: |
+          set -euo pipefail
+          printf '%s\n\nFor Crimson Desert 2.04.08 with DMM 4.8+. Import the zip in DMM: seven cards, tick the options you want and Mount. Linux/Steam Deck: add `winmm=n,b` to WINEDLLOVERRIDES.\n' "$CHANGELOG" > notes.md
+          gh release create "v$VERSION" "$PACKAGE" --title "Custom Axiom Bracelet $VERSION" --notes-file notes.md --target "$GITHUB_SHA"
+
+      - name: Upload to Nexus Mods
+        id: nexus-upload
+        if: inputs.publish_nexus
+        uses: Nexus-Mods/upload-action@c96019556046053aa26044b44396cd38929daf23 # v1.0.0-beta.10
+        with:
+          api_key: ${{ secrets.NEXUSMODS_API_KEY }}
+          file_id: ${{ vars.NEXUSMODS_FILE_ID }}
+          filename: ${{ env.PACKAGE }}
+          version: ${{ inputs.version }}
+          display_name: Custom Axiom Bracelet
+          description: ${{ inputs.changelog }}
+          category: main
+          archive_existing_version: ${{ inputs.archive_existing_version }}
+          primary_mod_manager_download: true
+          allow_mod_manager_download: true
+          show_requirements_pop_up: false
+          update_mod_version: true
+
+      - name: Write summary
+        run: |
+          {
+            echo '## Release'
+            echo
+            echo "- Version: \`$VERSION\`"
+            echo "- GitHub release: https://github.com/${{ github.repository }}/releases/tag/v$VERSION"
+            echo "- Nexus Mods page: https://www.nexusmods.com/crimsondesert/mods/NEXUS_MOD_ID"
+            echo "- Nexus Mods upload: \`${{ inputs.publish_nexus }}\`"
+            echo "- Nexus file version ID: \`${{ steps.nexus-upload.outputs.version_id }}\`"
+          } >> "$GITHUB_STEP_SUMMARY"
