@@ -1,1 +1,1 @@
-Build your own Axiom Bracelet: 24 independent options in 6 DMM cards (Combat, Resistances, Regeneration, Movement, Underwater, Utility). Tick only the buffs you want, from resistances and regen to swim speed and breath. Quality of Life edits were removed in 2.04.08b.
+Build your own Axiom Bracelet: 29 independent options in 7 DMM cards (Combat, Resistances, Regeneration, Movement, Underwater, Utility, Quality of Life). Tick only the buffs you want, from resistances and regen to swim speed and breath, plus stacks, charges and durability.

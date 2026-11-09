@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Build "Custom Axiom Bracelet": ONE zip holding one DMM pack per buff group, one tickable member per buff.
 
-Input: the Axiom Bracelet buff table further down (EDITIONS).
+Input: src/qol_intents.json (format-3 iteminfo intents for the Quality of Life group).
 Output: release/Custom Axiom Bracelet <N> - <Group>/ (dmm_pack.json + one folder per option) and one zip with all of them.
 
 DMM has no author-defined sub-groups inside a pack card, so each group is its own pack: one import,
@@ -19,6 +19,7 @@ GAME = "2.04.08"
 NAME = "Custom Axiom Bracelet"
 AUTHOR = "Marukooh"
 ROOT = Path(__file__).resolve().parent
+SRC = ROOT / "src" / "qol_intents.json"
 OUT = ROOT / "release"
 
 BANDS = [("Daeil_Band", 1001129), ("OOngka_Daeil_Band", 1002864), ("Damian_Daeil_Band", 1003248)]
@@ -37,6 +38,7 @@ GROUPS = {  # group -> pack description
     "Movement": "Move, climb and swim speed for the Axiom Bracelet.",
     "Underwater (DLC)": "Breath buffs for the Axiom Bracelet. Requires the Charting the Unknown DLC.",
     "Utility": "Thievery, animal friendship, contribution EXP and two passive skills for the Axiom Bracelet.",
+    "Quality of Life": "Item-wide changes: stacks, charges, cooldowns, durability. Not tied to the bracelet.",
 }
 
 # (group, label, field, element, description, needs_dlc)
@@ -88,6 +90,13 @@ BRACELET = [
     ("Utility", "Restriction Immunity (passive)", PS, {"skill": 70994, "level": 1},
      "Passive skill Equip_Passive_RestrictionImmune: immune to movement-blocking effects.", False),
 ]
+QOL = [  # (field prefix, label, description)
+    ("max_stack_count", "Max Stack 999999", "Ammo, materials and consumables stack to 999999."),
+    ("max_charged_useable_count", "99 Charges", "Items with charges get 99."),
+    ("cooltime", "Shorter Item Cooldowns", "Usable item cooldowns cut to 1 s (8 s for a few)."),
+    ("max_endurance", "Durability 65535", "Equipment max durability set to 65535."),
+    ("is_destroy_when_broken", "Never Destroyed When Broken", "Broken items are no longer destroyed."),
+]
 
 
 def mod_json(title, desc, intents, dlc=False):
@@ -106,10 +115,17 @@ def safe(s):
 
 
 def build():
+    qol = json.loads(SRC.read_text(encoding="utf-8"))
+    assert len(qol) == 4832 and all(i["key"] not in dict(BANDS).values() for i in qol), len(qol)
+
     options = {g: [] for g in GROUPS}  # group -> [(label, desc, intents, dlc)]
     for group, label, field, elem, desc, dlc in BRACELET:
         rows = [{"entry": e, "key": k, "field": field, "op": "list_append", "new": elem} for e, k in BANDS]
         options[group].append((label, desc + " Axiom Bracelet of Kliff, Oongka and Damiane.", rows, dlc))
+    for prefix, label, desc in QOL:
+        rows = [i for i in qol if i["field"].split(".")[0] == prefix]
+        options["Quality of Life"].append((label, f"{desc} ({len(rows)} items)", rows, False))
+    assert sum(len(o[2]) for o in options["Quality of Life"]) == len(qol), "QoL edit lost"
 
     for old in OUT.glob(f"{NAME}*"):
         shutil.rmtree(old) if old.is_dir() else old.unlink()
