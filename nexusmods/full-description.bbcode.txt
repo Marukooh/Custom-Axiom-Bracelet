@@ -6,7 +6,7 @@
 
 [size=4][color=#D4A64A][b]Your bracelet. Your rules.[/b][/color][/size]
 [size=3][color=#D4D4D8]
-Kliff, Oongka and Damiane all wear the Axiom Bracelet, and it does next to nothing. [b]Custom Axiom Bracelet[/b] turns it into the piece of gear you want: one download, [b]29 options[/b] split into [b]7 cards[/b] in Definitive Mod Manager, and every option is its own checkbox. Want only the elemental resistances? Tick three boxes. Want the full god-tier bracelet? Tick them all.
+Kliff, Oongka and Damiane all wear the Axiom Bracelet, and it does next to nothing. [b]Custom Axiom Bracelet[/b] turns it into the piece of gear you want: one download, [b]28 options[/b] split into [b]7 cards[/b] in Definitive Mod Manager, and every option is its own checkbox. Want only the elemental resistances? Tick three boxes. Want the full god-tier bracelet? Tick them all.
 
 [color=#FBBF24][b]Features[/b][/color]
 [list]
@@ -14,7 +14,7 @@ Kliff, Oongka and Damiane all wear the Axiom Bracelet, and it does next to nothi
 [*][b]Grouped and readable:[/b] seven collapsible cards with plain names and a short description under every option.
 [*][b]All three characters:[/b] each option applies to Kliff's, Oongka's and Damiane's Axiom Bracelet at once.
 [*][b]Charting the Unknown ready:[/b] swim speed and breath buffs for the ocean, at the highest level the game defines. The breath options need the DLC and are skipped automatically without it.
-[*][b]Quality of Life included:[/b] bigger stacks, more charges, shorter cooldowns and tougher gear, each one optional.
+[*][b]Quality of Life included:[/b] bigger stacks, shorter cooldowns and tougher gear, each one optional.
 [*][b]Survives game updates:[/b] built on DMM's field-level format, which finds the right records by name instead of fixed byte offsets.
 [/list]
 [/color][/size]
@@ -30,7 +30,7 @@ Kliff, Oongka and Damiane all wear the Axiom Bracelet, and it does next to nothi
 [*][color=#38BDF8][b]4 - Movement:[/b][/color] Move Speed Lv15, Climb Speed Lv15, Swim Speed Lv10
 [*][color=#22D3EE][b]5 - Underwater (DLC):[/b][/color] Max Breath Lv80, Breath Regen Lv5, Breath on Hit Lv3
 [*][color=#A78BFA][b]6 - Utility:[/b][/color] Thievery, Animal Friendship and Contribution EXP Lv15, Metal Magnet and Restriction Immunity passives
-[*][color=#FBBF24][b]7 - Quality of Life:[/b][/color] Max Stack 999999, 99 Charges, Shorter Item Cooldowns, Durability 65535, Never Destroyed When Broken
+[*][color=#FBBF24][b]7 - Quality of Life:[/b][/color] Max Stack 999999, Shorter Item Cooldowns, Durability 65535, Never Destroyed When Broken
 [/list]
 [/color][/size]
 

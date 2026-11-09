@@ -92,7 +92,6 @@ BRACELET = [
 ]
 QOL = [  # (field prefix, label, description)
     ("max_stack_count", "Max Stack 999999", "Ammo, materials and consumables stack to 999999."),
-    ("max_charged_useable_count", "99 Charges", "Items with charges get 99."),
     ("cooltime", "Shorter Item Cooldowns", "Usable item cooldowns cut to 1 s (8 s for a few)."),
     ("max_endurance", "Durability 65535", "Equipment max durability set to 65535."),
     ("is_destroy_when_broken", "Never Destroyed When Broken", "Broken items are no longer destroyed."),
@@ -125,7 +124,9 @@ def build():
     for prefix, label, desc in QOL:
         rows = [i for i in qol if i["field"].split(".")[0] == prefix]
         options["Quality of Life"].append((label, f"{desc} ({len(rows)} items)", rows, False))
-    assert sum(len(o[2]) for o in options["Quality of Life"]) == len(qol), "QoL edit lost"
+    # charges are left out on purpose: any value crashed the game on load on 2.04.08
+    assert ({i["field"].split(".")[0] for i in qol} - {p for p, _, _ in QOL}
+            == {"max_charged_useable_count"}), "QoL edit lost"
 
     for old in OUT.glob(f"{NAME}*"):
         shutil.rmtree(old) if old.is_dir() else old.unlink()
