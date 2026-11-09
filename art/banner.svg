@@ -253,6 +253,6 @@
 <line x1="740" y1="236" x2="1380" y2="236" stroke="#d4a64a" stroke-width="1.5" opacity="0.6"/>
 <circle cx="1060" cy="236" r="5" fill="#d4a64a"/>
 <text x="1060" y="290" text-anchor="middle" font-family="Noto Serif Display" font-size="34" fill="#efe3c8">Pick every buff, one by one</text>
-<text x="1060" y="338" text-anchor="middle" font-family="Noto Serif Display" font-style="italic" font-size="24" fill="#c9b89a">29 options in 7 groups for Definitive Mod Manager</text>
+<text x="1060" y="338" text-anchor="middle" font-family="Noto Serif Display" font-style="italic" font-size="24" fill="#c9b89a">24 options in 6 groups for Definitive Mod Manager</text>
 <text x="1060" y="416" text-anchor="middle" font-family="Noto Serif Display" font-size="20" letter-spacing="6" fill="#d4a64a" opacity="0.85">CRIMSON DESERT MOD</text>
 </svg>

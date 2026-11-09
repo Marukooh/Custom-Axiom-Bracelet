@@ -14,7 +14,7 @@
 # Custom Axiom Bracelet
 
 **Kliff, Oongka and Damiane all wear the Axiom Bracelet, and it does next to nothing.** This mod turns
-it into the piece of gear you want: one download, **29 options** in **7 cards** in Definitive Mod Manager,
+it into the piece of gear you want: one download, **24 options** in **6 cards** in Definitive Mod Manager,
 and every option is its own checkbox.
 
 - **Pick buff by buff:** every option is independent, so any combination works.
@@ -22,7 +22,6 @@ and every option is its own checkbox.
 - **All three characters:** each option applies to Kliff's, Oongka's and Damiane's Axiom Bracelet at once.
 - **Charting the Unknown ready:** swim speed and breath buffs, at the highest level the game defines.
   The breath options need the DLC and are skipped automatically without it.
-- **Quality of Life included:** bigger stacks, more charges, shorter cooldowns and tougher gear, each one optional.
 - **Survives game updates:** DMM format 3 field-level edits find the right records by name, not by byte offset.
 
 ## What's inside
@@ -35,11 +34,16 @@ and every option is its own checkbox.
 | 4 - Movement | Move, Climb, Swim Speed |
 | 5 - Underwater (DLC) | Max Breath, Breath Regen, Breath on Hit |
 | 6 - Utility | Thievery, Animal Friendship, Contribution EXP, Metal Magnet, Restriction Immunity |
-| 7 - Quality of Life | Max Stack 999999, 99 Charges, Shorter Item Cooldowns, Durability 65535, Never Destroyed When Broken |
 
 Every bracelet buff counts as one Abyss effect, like the Abyss Gear in your armor. Players report that
 more than 18 Abyss effects in total can leave the game on an endless loading screen: untick a few if
-that happens. Stats, the two passives and the Quality of Life card are not Abyss effects.
+that happens. Stats and the two passives are not Abyss effects.
+
+## Changes in 2.04.08b
+The Quality of Life card was removed. Its edits (max stacks, charges, durability, cooldowns) came from
+an old preset batch that the game now rejects on many item types, and with it ticked the game refused
+to start. Use DMM's own **Mod Builder -> Item Mods** presets for those: they are maintained and
+filtered for this game version.
 
 ## Requirements
 - Crimson Desert **2.04.08**.
