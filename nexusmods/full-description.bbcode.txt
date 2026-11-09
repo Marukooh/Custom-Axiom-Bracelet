@@ -39,6 +39,9 @@ Kliff, Oongka and Damiane all wear the Axiom Bracelet, and it does next to nothi
 
 [line]
 
+[size=4][color=#D4A64A][b]What changed in 2.04.08b[/b][/color][/size]
+[size=3][color=#D4D4D8]The charges option is gone. It made the game refuse to start on 2.04.08, at any value, so it was removed after testing each option of that card one by one. Max stack, item cooldowns and durability are still there and all load fine. If you had the old card ticked and your game did not start, update the mod, untick (or delete) the old [i]7 - Quality of Life[/i] card, and Mount again.[/color][/size]
+
 [size=4][color=#D4A64A][b]Requirements[/b][/color][/size]
 [size=3][color=#D4D4D8]
 [list]
@@ -59,7 +62,7 @@ To change your build, tick or untick options and Mount again. To uninstall, unti
 [/color][/size]
 
 [size=4][color=#D4A64A][b]Compatibility[/b][/color][/size]
-[size=3][color=#D4D4D8]Works alongside other DMM mods. Mods that edit the Axiom Bracelet, or the stack size, charges, cooldowns or durability of the same items, overlap with the matching options: the later mod in your load order wins. Do not use it together with other Axiom Bracelet buff mods.[/color][/size]
+[size=3][color=#D4D4D8]Works alongside other DMM mods. Mods that edit the Axiom Bracelet, or the stack size, cooldowns or durability of the same items, overlap with the matching options: the later mod in your load order wins. Do not use it together with other Axiom Bracelet buff mods.[/color][/size]
 
 [line]
 
