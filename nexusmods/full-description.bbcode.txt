@@ -1,6 +1,6 @@
 [center][img]https://raw.githubusercontent.com/Marukooh/Custom-Axiom-Bracelet/main/art/banner.png[/img]
 
-[size=3][color=#4ADE80][b]FOR CRIMSON DESERT 2.04.08[/b][/color]  •  [color=#FBBF24][b]DMM 4.8  •  Windows, Linux (Proton) and Steam Deck  •  Any game language[/b][/color][/size][/center]
+[size=3][color=#4ADE80][b]FOR CRIMSON DESERT 2.05.00[/b][/color]  •  [color=#FBBF24][b]DMM 4.8  •  Windows, Linux (Proton) and Steam Deck  •  Any game language[/b][/color][/size][/center]
 
 [line]
 
@@ -45,7 +45,7 @@ Kliff, Oongka and Damiane all wear the Axiom Bracelet, and it does next to nothi
 [size=4][color=#D4A64A][b]Requirements[/b][/color][/size]
 [size=3][color=#D4D4D8]
 [list]
-[*]Crimson Desert [b]2.04.08[/b].
+[*]Crimson Desert [b]2.05.00[/b].
 [*][url=https://www.nexusmods.com/crimsondesert/mods/633][b]Definitive Mod Manager[/b][/url] [b]4.8[/b] or newer.
 [*]Optional: [b]Charting the Unknown[/b] DLC for the Underwater card.
 [*][b]Linux / Steam Deck:[/b] add [i]winmm=n,b[/i] to your launch options, e.g. [i]WINEDLLOVERRIDES="winmm=n,b" %command%[/i] (append it to your existing overrides if you already have some).

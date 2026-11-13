@@ -74,7 +74,7 @@ jobs:
           CHANGELOG: ${{ inputs.changelog }}
         run: |
           set -euo pipefail
-          printf '%s\n\nFor Crimson Desert 2.04.08 with DMM 4.8+. Import the zip in DMM: seven cards, tick the options you want and Mount. Linux/Steam Deck: add `winmm=n,b` to WINEDLLOVERRIDES.\n' "$CHANGELOG" > notes.md
+          printf '%s\n\nFor Crimson Desert 2.05.00 with DMM 4.8+. Import the zip in DMM: seven cards, tick the options you want and Mount. Linux/Steam Deck: add `winmm=n,b` to WINEDLLOVERRIDES.\n' "$CHANGELOG" > notes.md
           gh release create "v$VERSION" "$PACKAGE" --title "Custom Axiom Bracelet $VERSION" --notes-file notes.md --target "$GITHUB_SHA"
 
       - name: Upload to Nexus Mods

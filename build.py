@@ -14,8 +14,8 @@ import shutil
 import zipfile
 from pathlib import Path
 
-VERSION = "2.04.08b"  # mod version = game version it is validated for (2.04.08b for a second release)
-GAME = "2.04.08"
+VERSION = "2.05.00"  # mod version = game version it is validated for (2.04.08b for a second release)
+GAME = "2.05.00"
 NAME = "Custom Axiom Bracelet"
 AUTHOR = "Marukooh"
 ROOT = Path(__file__).resolve().parent
