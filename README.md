@@ -67,12 +67,10 @@ Releases go through the **Release** workflow (Actions → Release → Run workfl
 builds the zip, creates the `v<version>` GitHub release and, if asked, uploads the file to Nexus Mods.
 
 ## Also by me
-[Custom Artifact Challenges Difficulty](https://www.nexusmods.com/crimsondesert/mods/3370): choose how
-forgiving or demanding the Artifact Challenges are, with four presets (Cheat, Easy, Moderate, Hard)
-for timers, counts and distance requirements, including Charting the Unknown.
 
-[Withdraw Camp Funds](https://www.nexusmods.com/crimsondesert/mods/3946): adds a Withdraw Camp Funds
-option to Carl's menu at the Greymane Camp that turns Camp Funds back into silver.
+[Custom Artifact Challenges Difficulty](https://www.nexusmods.com/crimsondesert/mods/3370): choose how forgiving or demanding the Artifact Challenges are, with four presets (Cheat, Easy, Moderate, Hard) for timers, counts and distance requirements, including Charting the Unknown.
+
+[Withdraw Camp Funds](https://www.nexusmods.com/crimsondesert/mods/3946): adds a Withdraw Camp Funds option to Carl's menu at the Greymane Camp that turns Camp Funds back into silver, at the exact inverse of the game's donation rate, with the game's own quantity slider.
 
 ## Contributing
 Bug reports, compatibility notes for new game versions and pull requests are welcome: see
