@@ -27,9 +27,9 @@ Kliff, Oongka and Damiane all wear the Axiom Bracelet, and it does next to nothi
 [*][color=#E05A47][b]1 - Combat:[/b][/color] Attack +999, Defense +999, Attack Speed Lv15, Critical Rate Lv15, Heal on Hit Lv10
 [*][color=#E8893A][b]2 - Resistances:[/b][/color] Fire, Ice and Lightning Resistance Lv15, Fall Damage Reduction Lv10
 [*][color=#4ADE80][b]3 - Regeneration:[/b][/color] HP, Spirit and Stamina Regen Lv50, Lower Stamina Use Lv10
-[*][color=#38BDF8][b]4 - Movement:[/b][/color] Move Speed Lv15, Climb Speed Lv15, Swim Speed Lv10
+[*][color=#38BDF8][b]4 - Movement:[/b][/color] Move Speed Lv15, Climb Speed Lv10, Swim Speed Lv10
 [*][color=#22D3EE][b]5 - Underwater (DLC):[/b][/color] Max Breath Lv80, Breath Regen Lv5, Breath on Hit Lv3
-[*][color=#A78BFA][b]6 - Utility:[/b][/color] Thievery, Animal Friendship and Contribution EXP Lv15, Metal Magnet and Restriction Immunity passives
+[*][color=#A78BFA][b]6 - Utility:[/b][/color] Thievery, Animal Friendship and Contribution EXP Lv10, Metal Magnet and Restriction Immunity passives
 [*][color=#FBBF24][b]7 - Quality of Life:[/b][/color] Max Stack 999999, Shorter Item Cooldowns, Durability 65535, Never Destroyed When Broken
 [/list]
 [/color][/size]
@@ -38,6 +38,9 @@ Kliff, Oongka and Damiane all wear the Axiom Bracelet, and it does next to nothi
 [size=3][color=#D4D4D8]Every bracelet buff counts as one Abyss effect, the same as the Abyss Gear socketed in your armor. Players report that going over [b]18 Abyss effects in total[/b] can leave the game stuck on the loading screen. Count your bracelet buffs together with your armor's Abyss Gear, and untick a few if you hit an endless load. Stats (Attack, Defense, speeds, critical rate), the two passives and the Quality of Life card are not Abyss effects.[/color][/size]
 
 [line]
+
+[size=4][color=#D4A64A][b]What changed in 2.05.01b[/b][/color][/size]
+[size=3][color=#D4D4D8]Climb Speed, Thievery, Animal Friendship and Contribution EXP asked for level 15, but the game only defines 10 levels for those buffs, so they did nothing. They now use level 10, the highest the game has. Because their names changed, tick them again in DMM after updating. Requires DMM 5.0.3 or newer on game 2.05.01.[/color][/size]
 
 [size=4][color=#D4A64A][b]What changed in 2.04.08b[/b][/color][/size]
 [size=3][color=#D4D4D8]The charges option is gone. It made the game refuse to start on 2.04.08, at any value, so it was removed after testing each option of that card one by one. Max stack, item cooldowns and durability are still there and all load fine. If you had the old card ticked and your game did not start, update the mod, untick (or delete) the old [i]7 - Quality of Life[/i] card, and Mount again.[/color][/size]

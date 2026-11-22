@@ -14,7 +14,7 @@ import shutil
 import zipfile
 from pathlib import Path
 
-VERSION = "2.05.01"  # mod version = game version it is validated for (2.04.08b for a second release)
+VERSION = "2.05.01b"  # mod version = game version it is validated for (2.04.08b for a second release)
 GAME = "2.05.01"
 NAME = "Custom Axiom Bracelet"
 AUTHOR = "Marukooh"
@@ -43,7 +43,8 @@ GROUPS = {  # group -> pack description
 
 # (group, label, field, element, description, needs_dlc)
 # Names from buffinfo / statusinfo / skill in 2.04.08 (DDD = attack damage, DPV = defense).
-# Extra buffs use the max level the buff record defines (u32 @+21); 1000333/1000334/1000352 exist
+# Every buff uses at most the max level its buffinfo record defines (u32 @+21): a higher level does
+# not exist in the game (2.05.01: climb, thievery, animal friendship and contribution define 10). 1000333/1000334/1000352 exist
 # only in buffinfo.dlc_01.
 BRACELET = [
     ("Combat", "Attack +999", ST, {"stat": 1000002, "change_mb": 999000},
@@ -71,7 +72,7 @@ BRACELET = [
     ("Regeneration", "Lower Stamina Use Lv10", EB, {"buff": 1000015, "level": 10},
      "Actions use less stamina." + ABYSS, False),
     ("Movement", "Move Speed Lv15", SL, {"stat": 1000011, "change_mb": 15}, "Movement speed level 15.", False),
-    ("Movement", "Climb Speed Lv15", EB, {"buff": 1000100, "level": 15}, "Climb faster." + ABYSS, False),
+    ("Movement", "Climb Speed Lv10", EB, {"buff": 1000100, "level": 10}, "Climb faster." + NEW + ABYSS, False),
     ("Movement", "Swim Speed Lv10", EB, {"buff": 1000107, "level": 10}, "Swim faster." + NEW + ABYSS,
      False),
     ("Underwater (DLC)", "Max Breath Lv80", EB, {"buff": 1000333, "level": 80},
@@ -80,11 +81,11 @@ BRACELET = [
      "Breath refills faster." + NEW + DLC + ABYSS, True),
     ("Underwater (DLC)", "Breath on Hit Lv3", EB, {"buff": 1000352, "level": 3},
      "Recover breath when you hit." + NEW + DLC + ABYSS, True),
-    ("Utility", "Thievery Lv15", EB, {"buff": 1000119, "level": 15}, "Better at stealing." + ABYSS, False),
-    ("Utility", "Animal Friendship Lv15", EB, {"buff": 1000124, "level": 15},
-     "Animals befriend you faster." + ABYSS, False),
-    ("Utility", "Contribution EXP Lv15", EB, {"buff": 1000114, "level": 15},
-     "More contribution experience." + ABYSS, False),
+    ("Utility", "Thievery Lv10", EB, {"buff": 1000119, "level": 10}, "Better at stealing." + NEW + ABYSS, False),
+    ("Utility", "Animal Friendship Lv10", EB, {"buff": 1000124, "level": 10},
+     "Animals befriend you faster." + NEW + ABYSS, False),
+    ("Utility", "Contribution EXP Lv10", EB, {"buff": 1000114, "level": 10},
+     "More contribution experience." + NEW + ABYSS, False),
     ("Utility", "Metal Magnet (passive)", PS, {"skill": 75047, "level": 1},
      "Passive skill Passive_Item_MagnetMetal: pulls in metal items.", False),
     ("Utility", "Restriction Immunity (passive)", PS, {"skill": 70994, "level": 1},
