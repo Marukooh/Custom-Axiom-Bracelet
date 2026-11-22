@@ -14,7 +14,7 @@ through the **Release** GitHub workflow.
 - **Tags:** Cheating, Gameplay, Quality of Life, Items, Overpowered
 - **Version:** `2.05.01` (mod version = game version it is validated for, like the author's other mods)
 - **Main image (thumbnail):** `art/thumbnail.png` (1280×720); also add `art/banner.png`
-- **Requirements:** Definitive Mod Manager (mod 633); notes: "4.8 or newer. Linux/Steam Deck: winmm=n,b".
+- **Requirements:** Definitive Mod Manager (mod 633); notes: "5.0.3 or newer. Linux/Steam Deck: winmm=n,b".
   Optional DLC: Charting the Unknown (Underwater card only)
 - **Permissions:** no re-upload, no modification, no asset use, no conversion, no use in other mods
   or mod packs; credit: "See NOTICE.md on GitHub"; donation points as preferred
