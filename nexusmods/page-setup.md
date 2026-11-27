@@ -12,16 +12,16 @@ through the **Release** GitHub workflow.
 - **Description:** `nexusmods/full-description.bbcode.txt` (BBCode editor)
 - **Category:** Cheats and God items (or Gameplay)
 - **Tags:** Cheating, Gameplay, Quality of Life, Items, Overpowered
-- **Version:** `2.05.01b` (mod version = game version it is validated for, like the author's other mods)
+- **Version:** `2.06.00` (mod version = game version it is validated for, like the author's other mods)
 - **Main image (thumbnail):** `art/thumbnail.png` (1280×720); also add `art/banner.png`
-- **Requirements:** Definitive Mod Manager (mod 633); notes: "5.0.3 or newer. Linux/Steam Deck: winmm=n,b".
+- **Requirements:** Definitive Mod Manager (mod 633); notes: "5.3.0 or newer. Linux/Steam Deck: winmm=n,b".
   Optional DLC: Charting the Unknown (Underwater card only)
 - **Permissions:** no re-upload, no modification, no asset use, no conversion, no use in other mods
   or mod packs; credit: "See NOTICE.md on GitHub"; donation points as preferred
 - **Source code link:** https://github.com/Marukooh/Custom-Axiom-Bracelet
 
 ## First file
-Run `python3 build.py`, then upload `release/Custom Axiom Bracelet v2.05.01b.zip` as a **Main** file
+Run `python3 build.py`, then upload `release/Custom Axiom Bracelet v2.06.00.zip` as a **Main** file
 named `Custom Axiom Bracelet`, with "Mod Manager Download" enabled.
 
 ## Link the workflow

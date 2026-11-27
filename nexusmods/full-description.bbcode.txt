@@ -1,12 +1,12 @@
 [center][img]https://raw.githubusercontent.com/Marukooh/Custom-Axiom-Bracelet/main/art/banner.png[/img]
 
-[size=3][color=#4ADE80][b]FOR CRIMSON DESERT 2.05.01[/b][/color]  •  [color=#FBBF24][b]DMM 5.0.3+  •  Windows, Linux (Proton) and Steam Deck  •  Any game language[/b][/color][/size][/center]
+[size=3][color=#4ADE80][b]FOR CRIMSON DESERT 2.06.00[/b][/color]  •  [color=#FBBF24][b]DMM 5.3.0+  •  Windows, Linux (Proton) and Steam Deck  •  Any game language[/b][/color][/size][/center]
 
 [line]
 
 [size=4][color=#D4A64A][b]Your bracelet. Your rules.[/b][/color][/size]
 [size=3][color=#D4D4D8]
-Kliff, Oongka and Damiane all wear the Axiom Bracelet, and it does next to nothing. [b]Custom Axiom Bracelet[/b] turns it into the piece of gear you want: one download, [b]28 options[/b] split into [b]7 cards[/b] in Definitive Mod Manager, and every option is its own checkbox. Want only the elemental resistances? Tick three boxes. Want the full god-tier bracelet? Tick them all.
+Kliff, Oongka and Damiane all wear the Axiom Bracelet, and it does next to nothing. [b]Custom Axiom Bracelet[/b] turns it into the piece of gear you want: one download, [b]27 options[/b] split into [b]7 cards[/b] in Definitive Mod Manager, and every option is its own checkbox. Want only the elemental resistances? Tick three boxes. Want the full god-tier bracelet? Tick them all.
 
 [color=#FBBF24][b]Features[/b][/color]
 [list]
@@ -29,7 +29,7 @@ Kliff, Oongka and Damiane all wear the Axiom Bracelet, and it does next to nothi
 [*][color=#4ADE80][b]3 - Regeneration:[/b][/color] HP, Spirit and Stamina Regen Lv50, Lower Stamina Use Lv10
 [*][color=#38BDF8][b]4 - Movement:[/b][/color] Move Speed Lv15, Climb Speed Lv10, Swim Speed Lv10
 [*][color=#22D3EE][b]5 - Underwater (DLC):[/b][/color] Max Breath Lv80, Breath Regen Lv5, Breath on Hit Lv3
-[*][color=#A78BFA][b]6 - Utility:[/b][/color] Thievery, Animal Friendship and Contribution EXP Lv10, Metal Magnet and Restriction Immunity passives
+[*][color=#A78BFA][b]6 - Utility:[/b][/color] Thievery, Animal Friendship and Contribution EXP Lv10 and the Restriction Immunity passive
 [*][color=#FBBF24][b]7 - Quality of Life:[/b][/color] Max Stack 999999, Shorter Item Cooldowns, Durability 65535, Never Destroyed When Broken
 [/list]
 [/color][/size]
@@ -39,8 +39,11 @@ Kliff, Oongka and Damiane all wear the Axiom Bracelet, and it does next to nothi
 
 [line]
 
+[size=4][color=#D4A64A][b]What changed in 2.06.00[/b][/color][/size]
+[size=3][color=#D4D4D8]Game 2.06.00 gives all three bracelets Metal Magnet by default. The Utility card now offers Restriction Immunity alongside the three utility buffs.[/color][/size]
+
 [size=4][color=#D4A64A][b]What changed in 2.05.01b[/b][/color][/size]
-[size=3][color=#D4D4D8]Climb Speed, Thievery, Animal Friendship and Contribution EXP asked for level 15, but the game only defines 10 levels for those buffs, so they did nothing. They now use level 10, the highest the game has. Because their names changed, tick them again in DMM after updating. Requires DMM 5.0.3 or newer on game 2.05.01.[/color][/size]
+[size=3][color=#D4D4D8]Climb Speed, Thievery, Animal Friendship and Contribution EXP asked for level 15, but the game only defines 10 levels for those buffs, so they did nothing. They now use level 10, the highest the game has. Because their names changed, tick them again in DMM after updating.[/color][/size]
 
 [size=4][color=#D4A64A][b]What changed in 2.04.08b[/b][/color][/size]
 [size=3][color=#D4D4D8]The charges option is gone. It made the game refuse to start on 2.04.08, at any value, so it was removed after testing each option of that card one by one. Max stack, item cooldowns and durability are still there and all load fine. If you had the old card ticked and your game did not start, update the mod, untick (or delete) the old [i]7 - Quality of Life[/i] card, and Mount again.[/color][/size]
@@ -48,8 +51,8 @@ Kliff, Oongka and Damiane all wear the Axiom Bracelet, and it does next to nothi
 [size=4][color=#D4A64A][b]Requirements[/b][/color][/size]
 [size=3][color=#D4D4D8]
 [list]
-[*]Crimson Desert [b]2.05.01[/b].
-[*][url=https://www.nexusmods.com/crimsondesert/mods/633][b]Definitive Mod Manager[/b][/url] [b]5.0.3[/b] or newer: older versions cannot read game 2.05.01's item table and skip every item mod.
+[*]Crimson Desert [b]2.06.00[/b].
+[*][url=https://www.nexusmods.com/crimsondesert/mods/633][b]Definitive Mod Manager[/b][/url] [b]5.3.0[/b] or newer: the first DMM that reads the 2.06.00 item table.
 [*]Optional: [b]Charting the Unknown[/b] DLC for the Underwater card.
 [*][b]Linux / Steam Deck:[/b] add [i]winmm=n,b[/i] to your launch options, e.g. [i]WINEDLLOVERRIDES="winmm=n,b" %command%[/i] (append it to your existing overrides if you already have some).
 [/list]

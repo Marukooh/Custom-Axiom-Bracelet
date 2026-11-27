@@ -5,8 +5,7 @@ Input: src/qol_intents.json (format-3 iteminfo intents for the Quality of Life g
 Output: release/Custom Axiom Bracelet <N> - <Group>/ (dmm_pack.json + one folder per option) and one zip with all of them.
 
 DMM has no author-defined sub-groups inside a pack card, so each group is its own pack: one import,
-one collapsible card per group. The Axiom Bracelet's buff, stat and passive lists are empty in vanilla
-2.04.08, so each entry is its own `list_append` member and the options stack. Member titles start with
+one collapsible card per group. Each option is a separate member with `list_append` edits, so the options stack. Member titles start with
 their position so they sort the same whatever DMM sorts by.
 """
 import json
@@ -14,8 +13,8 @@ import shutil
 import zipfile
 from pathlib import Path
 
-VERSION = "2.05.01b"  # mod version = game version it is validated for (2.04.08b for a second release)
-GAME = "2.05.01"
+VERSION = "2.06.00"  # mod version = game version it is validated for (2.04.08b for a second release)
+GAME = "2.06.00"
 NAME = "Custom Axiom Bracelet"
 AUTHOR = "Marukooh"
 ROOT = Path(__file__).resolve().parent
@@ -37,7 +36,7 @@ GROUPS = {  # group -> pack description
     "Regeneration": "HP, Spirit and Stamina regeneration and lower stamina use for the Axiom Bracelet.",
     "Movement": "Move, climb and swim speed for the Axiom Bracelet.",
     "Underwater (DLC)": "Breath buffs for the Axiom Bracelet. Requires the Charting the Unknown DLC.",
-    "Utility": "Thievery, animal friendship, contribution EXP and two passive skills for the Axiom Bracelet.",
+    "Utility": "Thievery, animal friendship, contribution EXP and a passive skill for the Axiom Bracelet.",
     "Quality of Life": "Item-wide changes: stacks, charges, cooldowns, durability. Not tied to the bracelet.",
 }
 
@@ -86,8 +85,6 @@ BRACELET = [
      "Animals befriend you faster." + NEW + ABYSS, False),
     ("Utility", "Contribution EXP Lv10", EB, {"buff": 1000114, "level": 10},
      "More contribution experience." + NEW + ABYSS, False),
-    ("Utility", "Metal Magnet (passive)", PS, {"skill": 75047, "level": 1},
-     "Passive skill Passive_Item_MagnetMetal: pulls in metal items.", False),
     ("Utility", "Restriction Immunity (passive)", PS, {"skill": 70994, "level": 1},
      "Passive skill Equip_Passive_RestrictionImmune: immune to movement-blocking effects.", False),
 ]
@@ -141,6 +138,9 @@ def build():
             "description": f"{gdesc} Part of Custom Axiom Bracelet for game {GAME}, one tickable option per buff.",
         }, indent=1), encoding="utf-8")
         for n, (label, desc, rows, dlc) in enumerate(options[group], 1):
+            # Keep the existing DMM member path after removing Metal Magnet.
+            if label == "Restriction Immunity (passive)":
+                n = 5
             title = f"{n}. {label}"
             d = pack / safe(title)
             d.mkdir()

@@ -6,15 +6,15 @@
   <a href="https://github.com/Marukooh/Custom-Axiom-Bracelet/actions/workflows/build.yml"><img alt="Build" src="https://github.com/Marukooh/Custom-Axiom-Bracelet/actions/workflows/build.yml/badge.svg"></a>
   <a href="https://github.com/Marukooh/Custom-Axiom-Bracelet/releases/latest"><img alt="Latest release" src="https://img.shields.io/github/v/release/Marukooh/Custom-Axiom-Bracelet?label=release&color=d4a64a"></a>
   <a href="https://www.nexusmods.com/crimsondesert/mods/4165"><img alt="Nexus Mods" src="https://img.shields.io/badge/Nexus%20Mods-Custom%20Axiom%20Bracelet-d98f40"></a>
-  <img alt="Game version" src="https://img.shields.io/badge/Crimson%20Desert-2.05.01-8a1c1c">
-  <img alt="Mod manager" src="https://img.shields.io/badge/DMM-5.0.3-3b5b7a">
+  <img alt="Game version" src="https://img.shields.io/badge/Crimson%20Desert-2.06.00-8a1c1c">
+  <img alt="Mod manager" src="https://img.shields.io/badge/DMM-5.3.0-3b5b7a">
   <img alt="Platforms" src="https://img.shields.io/badge/Windows%20%7C%20Linux%20(Proton)%20%7C%20Steam%20Deck-supported-2f6b3a">
 </p>
 
 # Custom Axiom Bracelet
 
 **Kliff, Oongka and Damiane all wear the Axiom Bracelet, and it does next to nothing.** This mod turns
-it into the piece of gear you want: one download, **28 options** in **7 cards** in Definitive Mod Manager,
+it into the piece of gear you want: one download, **27 options** in **7 cards** in Definitive Mod Manager,
 and every option is its own checkbox.
 
 - **Pick buff by buff:** every option is independent, so any combination works.
@@ -34,16 +34,18 @@ and every option is its own checkbox.
 | 3 - Regeneration | HP, Spirit, Stamina, Lower Stamina Use |
 | 4 - Movement | Move, Climb, Swim Speed |
 | 5 - Underwater (DLC) | Max Breath, Breath Regen, Breath on Hit |
-| 6 - Utility | Thievery, Animal Friendship, Contribution EXP, Metal Magnet, Restriction Immunity |
+| 6 - Utility | Thievery, Animal Friendship, Contribution EXP, Restriction Immunity |
 | 7 - Quality of Life | Max Stack 999999, Shorter Item Cooldowns, Durability 65535, Never Destroyed When Broken |
 
 Every bracelet buff counts as one Abyss effect, like the Abyss Gear in your armor. Players report that
 more than 18 Abyss effects in total can leave the game on an endless loading screen: untick a few if
 that happens. Stats, the two passives and the Quality of Life card are not Abyss effects.
 
+Game 2.06.00 gives Metal Magnet to all three bracelets by default. The Utility card now offers Restriction Immunity alongside the three utility buffs.
+
 ## Requirements
-- Crimson Desert **2.05.01**.
-- [Definitive Mod Manager](https://www.nexusmods.com/crimsondesert/mods/633) **5.0.3** or newer (the first DMM that reads game 2.05.01's item table).
+- Crimson Desert **2.06.00**.
+- [Definitive Mod Manager](https://www.nexusmods.com/crimsondesert/mods/633) **5.3.0** or newer (the first DMM that reads the 2.06.00 item table).
 - Optional: the **Charting the Unknown** DLC for the Underwater card.
 - **Linux / Steam Deck:** add `winmm=n,b` to your launch options, e.g.
   `WINEDLLOVERRIDES="winmm=n,b" %command%`.
